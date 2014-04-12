@@ -1,0 +1,25 @@
+##  Plugin Information  ##
+name: SeikimatsuEnemy
+version: 1.0
+main: com.happytarn.SeikimatsuEnemy.SeikimatsuEnemy
+description:
+##  Original Author     ##
+author: happytarn
+commands:
+    seikimatsuenemy:
+      usage: /se help - to see the help
+      aliases: [se]
+      description: To see the SeikimatsuEnemy help.
+permissions:
+    hapitanCmd.enemy.easy:
+        default: op
+        description: Can se Reload.
+    hapitanCmd.enemy.normal:
+        default: op
+        description: Can se Reload.
+    hapitanCmd.enemy.hard:
+        default: op
+        description: Can se Reload.
+    hapitanCmd.enemy.god:
+        default: op
+        description: Can se Reload.
