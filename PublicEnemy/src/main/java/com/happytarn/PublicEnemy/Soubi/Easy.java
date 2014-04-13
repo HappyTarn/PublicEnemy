@@ -29,7 +29,7 @@ public class Easy extends BaseSoubi{
 		//１番目
 		player.getInventory().setItem(1, getBow(EASY));
 		//２番目
-		player.getInventory().setItem(2, new ItemStack(Material.GOLDEN_APPLE, 24, (short)1));
+		player.getInventory().setItem(2, new ItemStack(Material.GOLDEN_APPLE, 12, (short)1));
 		//３番目
 		player.getInventory().setItem(3, new ItemStack(Material.ENDER_PEARL,16));
 		//４番目

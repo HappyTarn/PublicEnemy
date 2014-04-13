@@ -141,7 +141,7 @@ public class BaseSoubi {
 			// ダメージ増加５
 			item.addEnchantment(Enchantment.ARROW_DAMAGE, 5);
 			// 火属性
-			item.addEnchantment(Enchantment.ARROW_FIRE, 2);
+			item.addEnchantment(Enchantment.ARROW_FIRE, 1);
 			// パンチ
 			item.addEnchantment(Enchantment.ARROW_KNOCKBACK, 2);
 			// 無限
