@@ -41,7 +41,7 @@ public class PublicEnemyListener implements Listener {
 		// 死んだ人がエネミーだった場合
 		if (plugin.enemyMap.containsKey(player.getName())) {
 			String difficult = plugin.enemyMap.get(player.getName());
-
+			plugin.enemyMap.remove(player.getName());
 			// 難易度が取得できない場合はなにもなし
 			if (difficult == null)
 				return;
