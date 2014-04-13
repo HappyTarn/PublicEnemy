@@ -57,41 +57,41 @@ public class SeCommand implements CommandExecutor {
 				return true;
 			}
 
-			//NORMALレベル
-			if(args[0].equalsIgnoreCase("easy") && player.hasPermission(ENEMY_NORMAL)){
-				//NORMAL用の装備セットをセットする。
-				Normal.set(player);
-				//エネミー出現メッセージ
-				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("NORMALレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
-						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
-				//エネミー出現フラグ
-				plugin.enemyMap.put(player.getName(), "NORMAL");
-				return true;
-			}
-
-			//HARDレベル
-			if(args[0].equalsIgnoreCase("easy") && player.hasPermission(ENEMY_HARD)){
-				//HARD用の装備をセットする。
-				Hard.set(player);
-				//エネミー出現メッセージ
-				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("HARDレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
-						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
-				//エネミー出現フラグ
-				plugin.enemyMap.put(player.getName(), "HARD");
-				return true;
-			}
-
-			//GODレベル
-			if(args[0].equalsIgnoreCase("easy") && player.hasPermission(ENEMY_GOD)){
-				//GOD用の装備をセットする。
-				God.set(player);
-				//エネミー出現メッセージ
-				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("GODレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
-						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
-				//エネミー出現フラグ
-				plugin.enemyMap.put(player.getName(), "GOD");
-				return true;
-			}
+//			//NORMALレベル
+//			if(args[0].equalsIgnoreCase("easy") && player.hasPermission(ENEMY_NORMAL)){
+//				//NORMAL用の装備セットをセットする。
+//				Normal.set(player);
+//				//エネミー出現メッセージ
+//				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("NORMALレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
+//						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
+//				//エネミー出現フラグ
+//				plugin.enemyMap.put(player.getName(), "NORMAL");
+//				return true;
+//			}
+//
+//			//HARDレベル
+//			if(args[0].equalsIgnoreCase("easy") && player.hasPermission(ENEMY_HARD)){
+//				//HARD用の装備をセットする。
+//				Hard.set(player);
+//				//エネミー出現メッセージ
+//				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("HARDレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
+//						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
+//				//エネミー出現フラグ
+//				plugin.enemyMap.put(player.getName(), "HARD");
+//				return true;
+//			}
+//
+//			//GODレベル
+//			if(args[0].equalsIgnoreCase("easy") && player.hasPermission(ENEMY_GOD)){
+//				//GOD用の装備をセットする。
+//				God.set(player);
+//				//エネミー出現メッセージ
+//				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("GODレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
+//						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
+//				//エネミー出現フラグ
+//				plugin.enemyMap.put(player.getName(), "GOD");
+//				return true;
+//			}
 		}
 
 		return true;
