@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 
-import com.happytarn.PublicEnemy.SeikimatsuEnemy;
+import com.happytarn.PublicEnemy.PublicEnemy;
 import com.happytarn.PublicEnemy.Soubi.Easy;
 import com.happytarn.PublicEnemy.Soubi.God;
 import com.happytarn.PublicEnemy.Soubi.Hard;
@@ -22,13 +22,13 @@ public class SeCommand implements CommandExecutor {
 	private static final Permission ENEMY_GOD = new Permission("hapitanCmd.enemy.god");
 
 	//世紀末エネミープラグイン
-	private SeikimatsuEnemy plugin;
+	private PublicEnemy plugin;
 
 	/**
 	 * コンストラクタ
 	 * @param plugin
 	 */
-	public SeCommand (SeikimatsuEnemy plugin){
+	public SeCommand (PublicEnemy plugin){
 		this.plugin = plugin;
 	}
 
@@ -52,6 +52,8 @@ public class SeCommand implements CommandExecutor {
 				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("EASYレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
 						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
 
+				//エネミー出現フラグ
+				plugin.enemyMap.put(player.getName(), "EASY");
 				return true;
 			}
 
@@ -62,7 +64,8 @@ public class SeCommand implements CommandExecutor {
 				//エネミー出現メッセージ
 				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("NORMALレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
 						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
-
+				//エネミー出現フラグ
+				plugin.enemyMap.put(player.getName(), "NORMAL");
 				return true;
 			}
 
@@ -73,7 +76,8 @@ public class SeCommand implements CommandExecutor {
 				//エネミー出現メッセージ
 				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("HARDレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
 						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
-
+				//エネミー出現フラグ
+				plugin.enemyMap.put(player.getName(), "HARD");
 				return true;
 			}
 
@@ -84,7 +88,8 @@ public class SeCommand implements CommandExecutor {
 				//エネミー出現メッセージ
 				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("GODレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
 						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
-
+				//エネミー出現フラグ
+				plugin.enemyMap.put(player.getName(), "GOD");
 				return true;
 			}
 		}

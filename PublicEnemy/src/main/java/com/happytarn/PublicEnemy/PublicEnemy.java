@@ -1,14 +1,19 @@
 package com.happytarn.PublicEnemy;
 
+import java.util.HashMap;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.happytarn.PublicEnemy.command.SeCommand;
 
-public class SeikimatsuEnemy extends JavaPlugin{
+public class PublicEnemy extends JavaPlugin{
 
 
 	//世紀末エネミープラグイン
-	public static SeikimatsuEnemy plugin = null;
+	public static PublicEnemy plugin = null;
+
+
+	public HashMap<String, String> enemyMap = new HashMap<String, String>();
 
 	/**
 	 * プラグインが有効になったときの処理
@@ -22,8 +27,6 @@ public class SeikimatsuEnemy extends JavaPlugin{
 		getServer().getPluginCommand("publicenemy").setExecutor(new SeCommand(plugin));
 
 	}
-
-
 
 	/**
 	 * プラグインが無効になったときの処理
