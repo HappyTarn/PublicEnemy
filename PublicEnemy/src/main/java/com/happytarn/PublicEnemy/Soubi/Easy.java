@@ -36,6 +36,8 @@ public class Easy extends BaseSoubi{
 		player.getInventory().setItem(4, new ItemStack(Material.ENDER_PEARL,16));
 		//５番目
 		player.getInventory().setItem(5, new ItemStack(Material.ENDER_PEARL,16));
+		//６番目
+		player.getInventory().setItem(5, new ItemStack(Material.COOKED_BEEF,64));
 
 		//９番目
 		player.getInventory().setItem(9, getDiamondHelmet(EASY));
