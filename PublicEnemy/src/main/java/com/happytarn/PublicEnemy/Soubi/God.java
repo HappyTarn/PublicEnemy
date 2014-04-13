@@ -1,4 +1,4 @@
-package com.happytarn.SeikimatsuEnemy.Soubi;
+package com.happytarn.PublicEnemy.Soubi;
 
 import org.bukkit.entity.Player;
 

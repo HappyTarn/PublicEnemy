@@ -1,4 +1,4 @@
-package com.happytarn.SeikimatsuEnemy.command;
+package com.happytarn.PublicEnemy.command;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,11 +7,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 
-import com.happytarn.SeikimatsuEnemy.SeikimatsuEnemy;
-import com.happytarn.SeikimatsuEnemy.Soubi.Easy;
-import com.happytarn.SeikimatsuEnemy.Soubi.God;
-import com.happytarn.SeikimatsuEnemy.Soubi.Hard;
-import com.happytarn.SeikimatsuEnemy.Soubi.Normal;
+import com.happytarn.PublicEnemy.SeikimatsuEnemy;
+import com.happytarn.PublicEnemy.Soubi.Easy;
+import com.happytarn.PublicEnemy.Soubi.God;
+import com.happytarn.PublicEnemy.Soubi.Hard;
+import com.happytarn.PublicEnemy.Soubi.Normal;
 
 public class SeCommand implements CommandExecutor {
 
@@ -43,16 +43,14 @@ public class SeCommand implements CommandExecutor {
 		int Z = player.getLocation().getBlockZ();;
 
 
-
-		if(args.length > 1){
-
+		if(args.length >= 1){
 			//EASYレベル
-			if(args[0].equalsIgnoreCase("easy") && player.hasPermission(ENEMY_EASY)){
+			if(args[0].equalsIgnoreCase("easy") && (player.hasPermission(ENEMY_EASY)) || player.isOp()){
 				//Easy用の装備セットをセットする。
 				Easy.set(player);
 				//エネミー出現メッセージ
 				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("EASYレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
-						.append(ChatColor.AQUA).append("座標⇒X："+ X + "Y：" + Y + "Z：" + Z).toString());
+						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
 
 				return true;
 			}
@@ -62,8 +60,8 @@ public class SeCommand implements CommandExecutor {
 				//NORMAL用の装備セットをセットする。
 				Normal.set(player);
 				//エネミー出現メッセージ
-				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("EASYレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
-						.append(ChatColor.AQUA).append("座標⇒X："+ X + "Y：" + Y + "Z：" + Z).toString());
+				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("NORMALレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
+						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
 
 				return true;
 			}
@@ -73,8 +71,8 @@ public class SeCommand implements CommandExecutor {
 				//HARD用の装備をセットする。
 				Hard.set(player);
 				//エネミー出現メッセージ
-				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("EASYレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
-						.append(ChatColor.AQUA).append("座標⇒X："+ X + "Y：" + Y + "Z：" + Z).toString());
+				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("HARDレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
+						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
 
 				return true;
 			}
@@ -84,8 +82,8 @@ public class SeCommand implements CommandExecutor {
 				//GOD用の装備をセットする。
 				God.set(player);
 				//エネミー出現メッセージ
-				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("EASYレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
-						.append(ChatColor.AQUA).append("座標⇒X："+ X + "Y：" + Y + "Z：" + Z).toString());
+				sendMessage(new StringBuffer().append(ChatColor.GOLD).append("GODレベル").append(ChatColor.GREEN).append("のエネミーが出現しました。")
+						.append(ChatColor.AQUA).append("座標⇒X："+ X + " Y：" + Y + " Z：" + Z).toString());
 
 				return true;
 			}

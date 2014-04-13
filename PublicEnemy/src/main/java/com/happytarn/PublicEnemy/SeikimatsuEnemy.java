@@ -1,8 +1,8 @@
-package com.happytarn.SeikimatsuEnemy;
+package com.happytarn.PublicEnemy;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.happytarn.SeikimatsuEnemy.command.SeCommand;
+import com.happytarn.PublicEnemy.command.SeCommand;
 
 public class SeikimatsuEnemy extends JavaPlugin{
 
@@ -19,7 +19,7 @@ public class SeikimatsuEnemy extends JavaPlugin{
 		this.plugin = this;
 
 		//コマンドリスナーを登録
-		getServer().getPluginCommand("seikimatsuenemy").setExecutor(new SeCommand(plugin));
+		getServer().getPluginCommand("publicenemy").setExecutor(new SeCommand(plugin));
 
 	}
 

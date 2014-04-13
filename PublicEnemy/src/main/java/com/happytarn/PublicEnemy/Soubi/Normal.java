@@ -1,8 +1,8 @@
-package com.happytarn.SeikimatsuEnemy.Soubi;
+package com.happytarn.PublicEnemy.Soubi;
 
 import org.bukkit.entity.Player;
 
-public class Hard {
+public class Normal {
 
 	/**
 	 * プレイヤーに装備セットを設定する

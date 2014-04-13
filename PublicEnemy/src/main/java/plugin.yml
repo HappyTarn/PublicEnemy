@@ -1,15 +1,15 @@
 ##  Plugin Information  ##
-name: SeikimatsuEnemy
+name: PublicEnemy
 version: 1.0
-main: com.happytarn.SeikimatsuEnemy.SeikimatsuEnemy
+main: com.happytarn.PublicEnemy.PublicEnemy
 description:
 ##  Original Author     ##
 author: happytarn
 commands:
-    seikimatsuenemy:
-      usage: /se help - to see the help
-      aliases: [se]
-      description: To see the SeikimatsuEnemy help.
+    publicenemy:
+      usage: /pe help - to see the help
+      aliases: [pe]
+      description: To see the PublicEnemy help.
 permissions:
     hapitanCmd.enemy.easy:
         default: op

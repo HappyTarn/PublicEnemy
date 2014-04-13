@@ -1,8 +1,8 @@
-package com.happytarn.SeikimatsuEnemy.Soubi;
+package com.happytarn.PublicEnemy.Soubi;
 
 import org.bukkit.entity.Player;
 
-public class Normal {
+public class Easy extends BaseSoubi{
 
 	/**
 	 * プレイヤーに装備セットを設定する
@@ -10,6 +10,7 @@ public class Normal {
 	 * @param player
 	 */
 	public static void set(Player player) {
+		player.getInventory().addItem(getDiamondHelmet(EASY));
 
 	}
 

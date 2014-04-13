@@ -1,4 +1,4 @@
-package com.happytarn.SeikimatsuEnemy.Soubi;
+package com.happytarn.PublicEnemy.Soubi;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -18,7 +18,7 @@ public class BaseSoubi {
 			//耐久３
 			item.addEnchantment(Enchantment.DURABILITY, 3);
 			//ダメージ軽減５
-			item.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 5);
+			item.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
 			break;
 		default:
 			break;
